@@ -1,0 +1,27 @@
+{
+  "name": "skalor-protocol",
+  "version": "0.1.0",
+  "description": "On-chain enforcement layer for the Skalor agent-economy stack",
+  "main": "index.js",
+  "scripts": {
+    "test": "hardhat test",
+    "compile": "hardhat compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SkalorAI/skalor-protocol.git"
+  },
+  "keywords": [],
+  "author": "SkalorAI",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/SkalorAI/skalor-protocol/issues"
+  },
+  "homepage": "https://github.com/SkalorAI/skalor-protocol#readme",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@openzeppelin/contracts": "^5.6.1",
+    "hardhat": "^2.28.6",
+    "solc": "^0.8.24"
+  }
+}
