@@ -86,6 +86,5 @@ npx hardhat run scripts/deploy.js --network baseSepolia   # script tba
 
 ## Related
 
-- Skalor main repo (off-chain stack): https://github.com/josephthompson101/skalor
 - Catena Labs Agent Commerce Kit: https://github.com/agentcommercekit/ack
 - Skalor landing: https://skalor.xyz
