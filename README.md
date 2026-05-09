@@ -84,13 +84,16 @@ npx hardhat run scripts/deploy.js --network baseSepolia   # script tba
 
 - [x] Mandate.sol v0.1 (per-tx, daily, allowlist, pause, withdraw)
 - [x] MandateFactory.sol
-- [x] Test suite (Hardhat / ethers v6)
+- [x] Test suite (Hardhat / ethers v6) — 19/19 passing
 - [x] Compiles cleanly under solc 0.8.24
-- [ ] Deploy script for Base Sepolia
+- [x] Deploy + demo scripts for Base Sepolia + Tempo Moderato
+- [x] Live on Base Sepolia (see Live Deployments above)
+- [ ] Live on Tempo Moderato (gas access pending)
+- [ ] Verify contracts on Basescan (`hardhat verify`)
 - [ ] TypeScript SDK adapter (`@skalor/protocol`)
 - [ ] KYA Bureau SBT contract (soulbound reputation anchor)
 - [ ] ACK-Pay 402 paywall integration helper
-- [ ] Open KYA Bureau spec (RFC + JSON-LD context)
+- [ ] Open KYA Bureau spec (RFC v0.1 drafted; publishing forthcoming)
 - [ ] Phase D real-stake migration (USDC escrow + on-chain slash)
 
 ## Repo conventions
