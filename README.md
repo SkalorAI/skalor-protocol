@@ -18,6 +18,22 @@ See [`docs/POSITIONING.md`](./docs/POSITIONING.md) for the full strategic thesis
 
 The seven Skalor fiduciary gates (kill switch, OFAC, vendor allowlist, per-tx limit, daily budget, HITL, behavioral anomaly) live in the off-chain Skalor backend and run as advisory ML overlay. The Mandate is canonical truth: even if Skalor's backend is offline or compromised, the chain still enforces the deterministic rules. This is the layer Sean Neville named as missing in his Reid Hoffman interview — *"guardrails without policy enforcement just become suggestions."*
 
+## Live Deployments
+
+| Network | Contract | Address |
+|---|---|---|
+| Base Sepolia | MandateFactory | [`0x61FD854454e954a5B2C2844533A1fbB98eD4aA85`](https://sepolia.basescan.org/address/0x61FD854454e954a5B2C2844533A1fbB98eD4aA85) |
+| Base Sepolia | Mandate (demo) | [`0xB774bD25Ef8EC3D76f1E024712A6Debb95B1baC3`](https://sepolia.basescan.org/address/0xB774bD25Ef8EC3D76f1E024712A6Debb95B1baC3) |
+
+The demo Mandate enforces a $100 per-transaction limit and $500 daily limit. Live policy enforcement verified on-chain:
+
+- ✓ $5 spend approved → [tx](https://sepolia.basescan.org/tx/0x1b36293f25e04f9fc928189b2c20446aa8235cd3dd8a797a40e3878da52efdbd)
+- ✓ $10,000 spend reverted by `PerTxLimitExceeded` (no funds moved)
+
+Tempo Moderato deployment forthcoming.
+
+---
+
 ## Quickstart
 
 ```bash
