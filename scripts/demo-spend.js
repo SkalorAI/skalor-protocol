@@ -23,9 +23,9 @@ async function main() {
   console.log(`Mandate: ${mandateAddress}`);
   console.log(`Token:   ${cfg.stableSymbol}\n`);
 
-  const TOP_UP = ethers.parseUnits("1000", 6);
+  const TOP_UP = ethers.parseUnits("10", 6);
   let mandateBal = await stable.balanceOf(mandateAddress);
-  if (mandateBal < ethers.parseUnits("100", 6)) {
+  if (mandateBal < ethers.parseUnits("5", 6)) {
     console.log(`Topping up Mandate with ${fmt(TOP_UP)}...`);
     await (await stable.approve(mandateAddress, TOP_UP)).wait();
     await (await mandate.deposit(TOP_UP)).wait();
@@ -38,10 +38,10 @@ async function main() {
     console.log(`  Allowed.\n`);
   }
 
-  console.log("DEMO 1 — Spend $50 (under per-tx limit) — should SUCCEED");
+  console.log("DEMO 1 — Spend $5 (under per-tx limit) — should SUCCEED");
   const intent50 = ethers.keccak256(ethers.toUtf8Bytes("buy 1 OpenAI API credit"));
   try {
-    const tx = await mandate.spend(DEMO_VENDOR, ethers.parseUnits("50", 6), intent50);
+    const tx = await mandate.spend(DEMO_VENDOR, ethers.parseUnits("5", 6), intent50);
     const r = await tx.wait();
     console.log(`  APPROVED — tx: ${r.hash}`);
     console.log(`  Explorer: ${cfg.explorerBaseUrl}/tx/${r.hash}\n`);
